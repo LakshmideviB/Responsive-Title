@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<br>
+<h1 style="text-align: center; font-size: 40px; color: rgb(17, 48, 224);">Welcome to Favourites</h1>
+<h3 style="text-align: center;font-size: 30px; color: red;">No favourites <a routerLink="/">click here</a> to get back
+</h3>
+<div style="text-align: center; font-size: 30px;">
+  <div>Current Items: {{ count$ | async }}</div><br>
+  <button (click)="increment()" class="btn btn-success">+</button>
+  <button (click)="decrement()" class="btn btn-danger">-</button>
+  <button (click)="reset()" class="btn btn-primary">Reset Counter</button>
+</div>

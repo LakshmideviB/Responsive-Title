@@ -1,0 +1,10 @@
+<form>
+  <input class="searchbox" [(ngModel)]="filterBy" [ngModelOptions]="{ standalone: true }" type="search"
+    aria-label="search"  placeholder="Search books or authors" (keyup)="filter()"  (click)="cancelSearch()"/>
+
+  <ul>
+    <li class="list" *ngFor="let book of filteredBooks">
+      {{ book.title }}
+    </li>
+  </ul>
+</form>

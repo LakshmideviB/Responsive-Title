@@ -1,0 +1,38 @@
+<mat-toolbar style="background-color: #3f51b5" color="primary" class="docs-navbar-header mat-elevation-z2">
+    <mat-toolbar-row>
+        <div class="brand-title">
+            <button mat-button routerLink="home">
+                <mat-icon>book</mat-icon> Book Cart
+            </button>
+        </div>
+
+        <div>
+            <app-search></app-search>
+        </div>
+
+        <div>
+            <button mat-icon-button [routerLinkActive]="['link-active']" routerLink="wishlist">
+                <mat-icon matBadge="0" matBadgeColor="warn">favorite</mat-icon>
+            </button>
+
+            <button mat-icon-button [routerLinkActive]="['link-active']" routerLink="shopping-cart">
+                <mat-icon matBadge="0" matBadgeColor="warn">shopping_cart</mat-icon>
+            </button>
+
+            <ng-container>
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <mat-icon style="font-size: 27px">account_circle</mat-icon>
+                    <button style="font-size: 17px; padding: 3px" mat-button [routerLinkActive]="['link-active']"
+                        routerLink="/">
+                        hihowareyou
+                    </button>
+                    <mat-icon>arrow_drop_down</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item routerLink="/">My Orders</button>
+                    <button mat-menu-item routerLink="/">Logout</button>
+                </mat-menu>
+            </ng-container>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
